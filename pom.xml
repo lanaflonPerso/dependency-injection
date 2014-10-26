@@ -5,9 +5,6 @@
     <groupId>org.randoomz</groupId>
     <artifactId>dependency-injection</artifactId>
     <version>1.0</version>
-    <modules>
-        <module>guice</module>
-    </modules>
     <packaging>pom</packaging>
 
     <name>dependency-injection</name>
@@ -17,6 +14,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.6</java.version>
     </properties>
+
+    <modules>
+        <module>guice</module>
+        <module>dagger</module>
+    </modules>
 
     <dependencies>
         <dependency>
