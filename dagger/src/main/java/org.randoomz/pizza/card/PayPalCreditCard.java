@@ -8,7 +8,7 @@ import java.util.Locale;
 /**
  * Created by gerard on 9/08/14.
  */
-public class PayPalCreditCard implements CreditCard {
+public class PayPalCreditCard implements org.randoomz.pizza.card.CreditCard {
   private String apiKey;
 
   @Override public void pay(Pizza pizza) {

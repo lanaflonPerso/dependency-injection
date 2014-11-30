@@ -16,19 +16,16 @@ import org.randoomz.pizza.recipes.Sicilian;
  * Created by gerard on 8/08/14.
  */
 public class PizzaModule extends AbstractModule {
-    @Override
-    protected void configure() {
-        // Bind Cooking class to WoodFire class, because wood fire is the best cooking !
-        bind(Cooking.class).to(WoodFire.class);
-        // Bind abstract Recipe class to Sicilian class when the attribute is named by "hot" value.
-        bind(Recipe.class).annotatedWith(Names.named("hot")).to(Sicilian.class);
-    }
+  @Override protected void configure() {
+    // Bind Cooking class to WoodFire class, because wood fire is the best cooking !
+    bind(Cooking.class).to(WoodFire.class);
+    // Bind abstract Recipe class to Sicilian class when the attribute is named by "hot" value.
+    bind(Recipe.class).annotatedWith(Names.named("hot")).to(Sicilian.class);
+  }
 
-    @Provides
-    @PayPal
-    public CreditCard provideCreditCard() {
-        final CreditCard creditCard = new PayPalCreditCard();
-        creditCard.setApiKey("AwesomeApiKey");
-        return creditCard;
-    }
+  @Provides @PayPal public CreditCard provideCreditCard() {
+    final CreditCard creditCard = new PayPalCreditCard();
+    creditCard.setApiKey("AwesomeApiKey");
+    return creditCard;
+  }
 }

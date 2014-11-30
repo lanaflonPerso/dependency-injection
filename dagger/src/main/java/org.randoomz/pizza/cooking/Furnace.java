@@ -3,8 +3,8 @@ package org.randoomz.pizza.cooking;
 /**
  * Created by gerard on 8/08/14.
  */
-public class WoodFire extends Cooking {
+public class Furnace extends org.randoomz.pizza.cooking.Cooking {
   @Override public void turnOn() {
-    System.out.println("... turn on wood fire ...");
+    System.out.println("... turn on furnace ...");
   }
 }
