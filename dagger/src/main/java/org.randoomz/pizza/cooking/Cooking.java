@@ -19,7 +19,6 @@ public abstract class Cooking {
     System.out.println("... pizza in progress ...");
     System.out.println("... Oh wait, I'm a program ...");
     System.out.println("... Your pizza is ready ! ...");
-    System.err.print(pizzaProvider);
     final Pizza pizza = pizzaProvider.get();
     pizza.setRecipe(recipe);
     return pizza;
